@@ -205,7 +205,7 @@
   <project path="external/webp" name="platform/external/webp" />
   <project path="external/webrtc" name="platform/external/webrtc" />
   <project path="external/wpa_supplicant_6" name="SlimRoms/android_external_wpa_supplicant_6" remote="github" revision="jb4.3" />
-  <project path="external/wpa_supplicant_8" name="SlimRoms/android_external_wpa_supplicant_8" remote="github" revision="jb4.3" />
+  <!-- project path="external/wpa_supplicant_8" name="SlimRoms/android_external_wpa_supplicant_8" remote="github" revision="jb4.3" / -->
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" />
   <project path="external/yaffs2" name="SlimRoms/android_external_yaffs2" remote="github" revision="jb4.3" />
@@ -260,7 +260,7 @@
   <project path="hardware/samsung_slsi/exynos5" name="platform/hardware/samsung_slsi/exynos5" />
   <project path="hardware/ti/omap3" name="SlimRoms/hardware_ti_omap3" remote="github" revision="jb4.3" />
   <project path="hardware/ti/omap4xxx" name="SlimRoms/hardware_ti_omap4xxx" remote="github" revision="jb4.3" />
-  <project path="hardware/ti/wlan" name="SlimRoms/hardware_ti_wlan" remote="github" revision="jb4.3" />
+  <!-- project path="hardware/ti/wlan" name="SlimRoms/hardware_ti_wlan" remote="github" revision="jb4.3" / -->
   <project path="hardware/ti/wpan" name="SlimRoms/hardware_ti_wpan" remote="github" revision="jb4.3" />
   <project path="libcore" name="SlimRoms/platform_libcore" remote="github" revision="jb4.3" />
   <project path="libnativehelper" name="platform/libnativehelper" />
@@ -393,9 +393,9 @@
   <project path="device/htc/tegra3-common" name="android_device_htc_tegra3-common" remote="teemo" revision="slimx" />
 
   <!-- Endeavoru ADDS -->
-  <!-- project path="hardware/ti/wlan" name="android_hardware_ti_wlan" remote="teemo" revision="cm-10.2" / -->
+  <project path="hardware/ti/wlan" name="android_hardware_ti_wlan" remote="teemo" revision="cm-10.2" />
   <!-- project path="external/wpa_supplicant_8_ti" name="android_external_wpa_supplicant_8_ti" remote="teemo" revision="padroid" / -->
-  <!-- project path="external/wpa_supplicant_8_ti" name="hostap" remote="teemo" revision="padroid" / -->
+  <project path="external/wpa_supplicant_8_ti" name="hostap" remote="teemo" revision="padroid" />
   <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" remote="cm" revision="cm-10.2" />
 
   <!-- New Additions for slim -->
