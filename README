@@ -1,6 +1,7 @@
 Init your repo:
 
     $ repo init -u git://github.com/teemodk/slimx_manifest.git -b jb4.3
+    
 Get the source
 
     $ repo sync
@@ -8,9 +9,9 @@ Get the source
 Setup environment:
 
     $ . build/envsetup.sh
-    
     $ lunch slim_endeavoru-userdebug
     
 Build:
 
     $ make -j4 bacon
+    
