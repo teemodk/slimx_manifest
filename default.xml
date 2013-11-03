@@ -387,7 +387,7 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
 
-  <project path="slimx_manifest" name="teemodk/slimx_manifest" remote="github" revision="jb4.3" />
+  <project path="slimx_manifest" name="teemodk/slimx_manifest" remote="github" revision="jb4.3a" />
 
   <!-- Endeavoru Local -->
   <project path="vendor/htc"               name="proprietary_vendor_htc"                       remote="thoemy" revision="cm-10.2" />
