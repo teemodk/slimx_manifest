@@ -6,6 +6,9 @@ Get the source:
 
     $ repo sync
 
+!!! Add slim.mk to device/htc/endeavoru 
+!!! https://github.com/teemodk/android_device_htc_endeavoru/tree/slimx
+
 Setup environment:
 
     $ . build/envsetup.sh
