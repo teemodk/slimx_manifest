@@ -1,3 +1,6 @@
+Experimental, most likely broken
+--------------------------------
+
 Init your repo:
 
     $ repo init -u git://github.com/teemodk/slimx_manifest.git -b jb4.3a
