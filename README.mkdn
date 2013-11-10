@@ -6,6 +6,10 @@ Get the source:
 
     $ repo sync
 
+Enter your preference in "envsetup.sh" line 142:
+
+            arm) toolchaindir=~/toolchain/linaro/bin
+
 Setup environment:
 
     $ . build/envsetup.sh
