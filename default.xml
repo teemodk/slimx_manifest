@@ -11,9 +11,6 @@
   <remote  name="teemo"
            fetch="git://github.com/teemodk" />
 
-  <remote  name="thoemy"
-           fetch="git://github.com/thoemy" />
-
   <remote  name="cm"
            fetch="git://github.com"
 	   review="review.cyanogenmod.org" />
@@ -59,7 +56,7 @@
   <project path="external/bouncycastle" name="platform/external/bouncycastle" />
   <project path="external/bsdiff" name="platform/external/bsdiff" />
   <project path="external/busybox" name="SlimRoms/android_external_busybox" remote="github" revision="jb4.3" />
-  <project path="external/bzip2" name="platform/external/bzip2" />
+  <project path="external/bzip2" name="platform/external/bzip2" />th
   <project path="external/ceres-solver" name="platform/external/ceres-solver" />
   <project path="external/checkpolicy" name="platform/external/checkpolicy" />
   <project path="external/chromium" name="platform/external/chromium" />
@@ -390,7 +387,7 @@
   <project path="slimx_manifest" name="teemodk/slimx_manifest" remote="github" revision="jb4.3a" />
 
   <!-- Endeavoru Local -->
-  <project path="vendor/htc"               name="proprietary_vendor_htc"                       remote="thoemy" revision="cm-10.2" />
+  <project path="vendor/htc"               name="TheMuppets/proprietary_vendor_htc"            remote="github" revision="cm-10.2" />
   <project path="kernel/htc/endeavoru"     name="CyanogenMod/android_kernel_htc_endeavoru"     remote="cm"     revision="cm-10.2" />
   <project path="device/htc/endeavoru"     name="CyanogenMod/android_device_htc_endeavoru"     remote="cm"     revision="cm-10.2" />
   <project path="device/htc/tegra3-common" name="CyanogenMod/android_device_htc_tegra3-common" remote="cm"     revision="cm-10.2" />
