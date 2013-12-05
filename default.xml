@@ -22,7 +22,7 @@
   <project path="build" name="android_build" remote="teemo" revision="jb4.3" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <!-- --- AOSP --- -->
+  <!--  AOSP  -->
   <project path="abi/cpp" name="platform/abi/cpp" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
   <project path="cts" name="platform/cts" />
@@ -302,7 +302,7 @@
   <project path="tools/idea"              name="platform/tools/idea"              groups="notdefault,tools" />
   <project path="tools/motodev"           name="platform/tools/motodev"           groups="notdefault,motodev" />
   <project path="tools/swt"               name="platform/tools/swt"               groups="notdefault,tools" />
-  <!-- --- SLIMROMS --- -->
+  <!--  SLIMROMS  -->
   <project path="bionic" name="SlimRoms/android_bionic"               remote="github" revision="jb4.3" />
   <project path="bootable/recovery" name="SlimRoms/bootable_recovery" remote="github" revision="jb4.3" />
   <project path="dalvik" name="SlimRoms/android_dalvik"               remote="github" revision="jb4.3" />
