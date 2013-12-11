@@ -328,7 +328,7 @@
   <!-- project path="external/wpa_supplicant_8" name="SlimRoms/android_external_wpa_supplicant_8" remote="github" revision="jb4.3" / -->
   <!-- project path="frameworks/av"                 name="SlimRoms/frameworks_av"                 remote="github" revision="jb4.3" / -->
   <project path="frameworks/av"                    name="android_frameworks_av"                 remote="teemo" revision="cm-10.2" />
-  <project path="frameworks/base"               name="SlimRoms/frameworks_base"               remote="github" revision="jb4.3" />
+  <!-- project path="frameworks/base"               name="SlimRoms/frameworks_base"               remote="github" revision="jb4.3" / -->
   <project path="frameworks/compile/mclinker"   name="SlimRoms/frameworks_compile_mclinker"   remote="github" revision="jb4.3" />
   <project path="frameworks/native"             name="SlimRoms/frameworks_native"             remote="github" revision="jb4.3" />
   <project path="frameworks/opt/datetimepicker" name="SlimRoms/frameworks_opt_datetimepicker" remote="github" revision="jb4.3" />
@@ -371,7 +371,7 @@
   <project path="packages/apps/Nfc"            name="SlimRoms/packages_apps_Nfc"            remote="github" revision="jb4.3" />
   <project path="packages/apps/Phone"          name="SlimRoms/packages_apps_Phone"          remote="github" revision="jb4.3" />
   <project path="packages/apps/Provision"      name="SlimRoms/packages_apps_Provision"      remote="github" revision="jb4.3" />
-  <project path="packages/apps/Settings"       name="SlimRoms/packages_apps_Settings"       remote="github" revision="jb4.3" />
+  <!-- project path="packages/apps/Settings"       name="SlimRoms/packages_apps_Settings"       remote="github" revision="jb4.3" / -->
   <project path="packages/apps/SoundRecorder"  name="SlimRoms/packages_apps_SoundRecorder"  remote="github" revision="jb4.3" />
   <!-- project path="packages/apps/Torch" name="SlimRoms/packages_apps_Torch" remote="github" revision="jb4.3" / -->
   <project path="packages/apps/VoiceDialer"    name="SlimRoms/packages_apps_VoiceDialer" remote="github" revision="jb4.3" />
@@ -400,6 +400,10 @@
   <!-- project path="external/wpa_supplicant_8_ti" name="android_external_wpa_supplicant_8_ti" remote="teemo" revision="padroid" / -->
   <project path="external/wpa_supplicant_8_ti" name="hostap" remote="teemo" revision="padroid" />
   <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" remote="cm" revision="cm-10.2" />
+
+  <!-- Use own repos for Active Display -->
+  <project path="frameworks/base"        name="slimworks_base"         remote="teemo" revision="ad4.3" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="teemo" revision="ad4.3" />
 
   <!-- New Additions for slim -->
   <project path="vendor/slim" name="SlimRoms/vendor_slim" remote="github" revision="jb4.3" />
