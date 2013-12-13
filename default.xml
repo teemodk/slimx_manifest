@@ -19,7 +19,7 @@
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="android_build" remote="teemo" revision="jb4.3" >
+  <project path="build" name="android_build" remote="teemo" revision="ad4.3" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <!--  AOSP  -->
@@ -387,7 +387,7 @@
   <project path="system/netd"      name="SlimRoms/android_system_netd"      remote="github" revision="jb4.3" />
   <project path="system/vold"      name="SlimRoms/android_system_vold"      remote="github" revision="jb4.3" />
 
-  <project path="slimx_manifest" name="teemodk/slimx_manifest" remote="github" revision="jb4.3" />
+  <project path="slimx_manifest" name="teemodk/slimx_manifest" remote="github" revision="ad4.3" />
 
   <!-- Endeavoru Local -->
   <project path="vendor/htc"               name="proprietary_vendor_htc"           remote="teemo" revision="slimx" />
