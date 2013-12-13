@@ -390,7 +390,7 @@
   <project path="slimx_manifest" name="teemodk/slimx_manifest" remote="github" revision="jb4.3" />
 
   <!-- Endeavoru Local -->
-  <project path="vendor/htc"               name="proprietary_vendor_htc"           remote="teemo" revision="padroid" />
+  <project path="vendor/htc"               name="proprietary_vendor_htc"           remote="teemo" revision="slimx" />
   <project path="kernel/htc/endeavoru"     name="android_kernel_htc_endeavoru"     remote="teemo" revision="padroid" />
   <project path="device/htc/endeavoru"     name="android_device_htc_endeavoru"     remote="teemo" revision="slimx" />
   <project path="device/htc/tegra3-common" name="android_device_htc_tegra3-common" remote="teemo" revision="slimx" />
