@@ -325,7 +325,7 @@
   <project path="external/srec"                name="SlimRoms/android_external_srec"                remote="github" revision="jb4.3" />
   <project path="external/webkit"              name="SlimRoms/android_external_webkit"              remote="github" revision="jb4.3" />
   <project path="external/wpa_supplicant_6"    name="SlimRoms/android_external_wpa_supplicant_6"    remote="github" revision="jb4.3" />
-  <project path="external/wpa_supplicant_8"    name="SlimRoms/android_external_wpa_supplicant_8"    remote="github" revision="jb4.3" />
+  <!-- project path="external/wpa_supplicant_8"    name="SlimRoms/android_external_wpa_supplicant_8"    remote="github" revision="jb4.3" / -->
   <project path="external/yaffs2"               name="SlimRoms/android_external_yaffs2"              remote="github" revision="jb4.3" />
   <project path="external/zlib"                 name="SlimRoms/android_external_zlib"                remote="github" revision="jb4.3" />
 
@@ -354,7 +354,7 @@
   <project path="hardware/ril" name="SlimRoms/hardware_ril" remote="github" revision="jb4.3" />
   <project path="hardware/ti/omap3"    name="SlimRoms/hardware_ti_omap3"    remote="github" revision="jb4.3" />
   <project path="hardware/ti/omap4xxx" name="SlimRoms/hardware_ti_omap4xxx" remote="github" revision="jb4.3" />
-  <project path="hardware/ti/wlan" name="SlimRoms/hardware_ti_wlan" remote="github" revision="jb4.3" />
+  <!-- project path="hardware/ti/wlan" name="SlimRoms/hardware_ti_wlan" remote="github" revision="jb4.3" / -->
   <project path="hardware/ti/wpan"     name="SlimRoms/hardware_ti_wpan" remote="github" revision="jb4.3" />
   <project path="libcore" name="SlimRoms/platform_libcore" remote="github" revision="jb4.3" />
   <project path="packages/apps/Bluetooth"      name="SlimRoms/packages_apps_Bluetooth"      remote="github" revision="jb4.3" />
