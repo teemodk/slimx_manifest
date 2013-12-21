@@ -394,9 +394,9 @@
 
   <!-- Endeavoru Local -->
   <project path="vendor/htc"               name="TheMuppets/proprietary_vendor_htc"                     remote="github" revision="cm-10.2" />
-  <project path="kernel/htc/endeavoru"     name="CyanogenMod/android_kernel_htc_endeavoru"              remote="cm"     revision="cm-10.2"    />
+  <project path="kernel/htc/endeavoru"     name="enru-3.1.10-g517147e"                                  remote="teemo"  revision="master"  />
   <project path="device/htc/endeavoru"     name="android_device_htc_endeavoru"                          remote="teemo"  revision="next"    />
-  <project path="device/htc/tegra3-common" name="CyanogenMod/android_device_htc_tegra3-common"          remote="cm"     revision="cm-10.2"    />
+  <project path="device/htc/tegra3-common" name="CyanogenMod/android_device_htc_tegra3-common"          remote="cm"     revision="cm-10.2" />
 
   <!-- Endeavoru ADDS CM -->
   <project path="packages/apps/Torch"          name="CyanogenMod/android_packages_apps_Torch"          remote="cm" revision="cm-10.2" />
