@@ -1,6 +1,9 @@
+Definitely not working...
+-------------------------
+
 Init your repo:
 
-    $ repo init -u git://github.com/teemodk/slimx_manifest.git -b jb4.3
+    $ repo init -u git://github.com/teemodk/slimx_manifest.git -b sk
 
 Get the source:
 
