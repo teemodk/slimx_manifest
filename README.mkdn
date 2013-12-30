@@ -1,17 +1,27 @@
-Definitely not working...
--------------------------
+Maybe working...
+----------------
 
 Init your repo:
 
     $ repo init -u git://github.com/teemodk/slimx_manifest.git -b sk
 
+Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <manifest>
+      <project name="teemodk/proprietary_vendor_htc"           path="vendor/htc"                   remote="github" revision="sk" />
+      <project name="teemodk/enru-3.1.10-g517147e"             path="kernel/htc/endeavoru"         remote="github" revision="sk" />
+      <project name="teemodk/android_device_htc_endeavoru"     path="device/htc/endeavoru"         remote="github" revision="sk" />
+      <project name="teemodk/android_device_htc_tegra3-common" path="device/htc/tegra3-common"     remote="github" revision="sk" />
+      <project name="teemodk/hostap"                           path="external/wpa_supplicant_8_ti" remote="github" revision="sk" />
+      <project name="teemodk/android_hardware_ti_wpan"         path="hardware/ti/wpan"             remote="github" revision="sk" />
+      <project name="teemodk/android_hardware_ti_wlan"         path="hardware/ti/wlan"             remote="github" revision="sk" />
+    </manifest>
+
+
 Get the source:
 
     $ repo sync
-
-Enter your preference in "envsetup.sh" line 142:
-
-            arm) toolchaindir=~/toolchain/linaro/bin
 
 Setup environment:
 
