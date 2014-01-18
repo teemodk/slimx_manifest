@@ -8,30 +8,38 @@ Getting Started
 To get started with SlimKat, you'll need to get familiar with
 [Git and Repo](http://source.android.com/download/using-repo).
 
-Please take note that we have two main line branches depending on
-which hardware base your phone is working.
+Init your repo:
 
-If you have a qcom powered device which needs CodeAuroraForum (CAF)
-trees please us the kk4.4-caf branch which pulls for the effected packages
-the correct caf version for you.
+    $ repo init -u git://github.com/teemodk/slimx_manifest.git -b kk4.4
 
-To initialize your local repository using the SlimKat trees, use this command:
+Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <manifest>
+      <project name="teemodk/android_kernel_htc_endeavoru"             path="kernel/htc/endeavoru"         remote="github" revision="kk4.4" />
+      <project name="teemodk/android_device_htc_endeavoru"             path="device/htc/endeavoru"         remote="github" revision="kk4.4" />
+      <project name="teemodk/android_device_htc_tegra3-common"         path="device/htc/tegra3-common"     remote="github" revision="kk4.4" />
+      <project name="TheMuppets/proprietary_vendor_htc"                path="vendor/htc"                   remote="github" revision="cm-11.0" />
+      <project name="CyanogenMod/android_external_wpa_supplicant_8_ti" path="external/wpa_supplicant_8_ti" remote="github" revision="cm-11.0" />
+      <remove-project name="SlimRoms/hardware_ti_wpan" />
+      <project name="CyanogenMod/android_hardware_ti_wpan" path="hardware/ti/wpan" remote="github" revision="cm-11.0" />
+      <remove-project name="SlimRoms/hardware_ti_wlan" />
+      <project name="CyanogenMod/android_hardware_ti_wlan" path="hardware/ti/wlan" remote="github" revision="cm-11.0" />
+    </manifest>
 
 
-for google, exynos and non qcom devices:
+Get the source:
 
-	repo init -u git://github.com/SlimRoms/platform_manifest.git -b kk4.4
+    $ repo sync
 
+Setup environment:
 
-for qcom devices which are using CodeAuroraForum trees:
+    $ . build/envsetup.sh
+    $ lunch slim_endeavoru-userdebug
 
-	repo init -u git://github.com/SlimRoms/platform_manifest.git -b kk4.4-caf
+Build:
 
-
-
-Then sync up with this command:
-
-	repo sync
+    $ make -j4 bacon
 
 
 
