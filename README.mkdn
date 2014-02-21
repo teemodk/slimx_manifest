@@ -10,7 +10,7 @@ To get started with SlimKat, you'll need to get familiar with
 
 Init your repo:
 
-    $ repo init -u git://github.com/teemodk/slimx_manifest.git -b kk4.4
+    $ repo init -u git://github.com/SlimRoms/slimx_manifest.git -b kk4.4
 
 Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
 
