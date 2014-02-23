@@ -29,8 +29,6 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
       <project name="CyanogenMod/android_hardware_ti_wlan" path="hardware/ti/wlan" remote="github" revision="cm-11.0" />
       <remove-project name="SlimRoms/android_system_netd" />
       <project name="CyanogenMod/android_system_netd" path="system/netd" remote="github" revision="cm-11.0" />
-      <remove-project name="SlimRoms/bootable_recovery" />
-      <project name="CyanogenMod/android_bootable_recovery" path="bootable/recovery" remote="github" revision="cm-11.0" />
     </manifest>
 
 
