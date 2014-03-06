@@ -1,4 +1,3 @@
-
 Warning!  Use this only for the New Storage Layout 
 --------------------------------------------------
 
@@ -28,7 +27,7 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
     <?xml version="1.0" encoding="UTF-8"?>
     <manifest>
       <project name="teemodk/android_kernel_htc_endeavoru" path="kernel/htc/endeavoru" remote="github" revision="kk4.4" />
-      <project name="teemodk/android_device_htc_endeavoru" path="device/htc/endeavoru" remote="github" revision="kk4.4" />
+      <project name="teemodk/android_device_htc_endeavoru" path="device/htc/endeavoru" remote="github" revision="b-d" />
       <project name="teemodk/android_device_htc_tegra3-common" path="device/htc/tegra3-common" remote="github" revision="kk4.4" />
       <project name="teemodk/proprietary_vendor_htc" path="vendor/htc" remote="github" revision="kk4.4" />
     # Replace with CM11 source
