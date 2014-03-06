@@ -1,12 +1,23 @@
-Don't do this!
-==============
+
+Warning!  Use this only for the New Storage Layout 
+--------------------------------------------------
+
+http://review.cyanogenmod.org/#/c/59912/ - Thanks Thomas Wendt
 
 
-Getting Started
----------------
-
-To get started with SlimKat, you'll need to get familiar with
-[Git and Repo](http://source.android.com/download/using-repo).
+    #mmcblk0p1:  00600000 00001000 "wlan"
+    #mmcblk0p2:  00200000 00001000 "WDM"
+    #mmcblk0p3:  00600000 00001000 "radiocab"
+    #mmcblk0p4:  00800000 00001000 "boot"
+    #mmcblk0p5:  00800000 00001000 "recovery"
+    #mmcblk0p12: 50000000 00001000 "system"
+    #mmcblk0p13: 14000000 00001000 "cache"      - unused
+    #mmcblk0p14:650000000 00001000 "internalsd" - is now /data, including emulated sdcard
+    #mmcblk0p15: 89400000 00001000 "userdata"   - is now /cache
+    #mmcblk0p16: 00200000 00001000 "extra"
+    #mmcblk0p17: 00200000 00001000 "misc"
+    #mmcblk0p19: 01600000 00001000 "devlog"
+    #mmcblk0p20: 00200000 00001000 "pdata"
 
 Init your repo:
 
@@ -17,9 +28,10 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
     <?xml version="1.0" encoding="UTF-8"?>
     <manifest>
       <project name="teemodk/android_kernel_htc_endeavoru" path="kernel/htc/endeavoru" remote="github" revision="kk4.4" />
-      <project name="teemodk/android_device_htc_endeavoru" path="device/htc/endeavoru" remote="github" revision="b-d" />
+      <project name="teemodk/android_device_htc_endeavoru" path="device/htc/endeavoru" remote="github" revision="kk4.4" />
       <project name="teemodk/android_device_htc_tegra3-common" path="device/htc/tegra3-common" remote="github" revision="kk4.4" />
       <project name="teemodk/proprietary_vendor_htc" path="vendor/htc" remote="github" revision="kk4.4" />
+    # Replace with CM11 source
       <project name="CyanogenMod/android_external_wpa_supplicant_8_ti" path="external/wpa_supplicant_8_ti" remote="github" revision="cm-11.0" />
       <remove-project name="SlimRoms/frameworks_av" />
       <project name="CyanogenMod/android_frameworks_av" path="frameworks/av" remote="github" revision="cm-11.0" />
@@ -29,6 +41,8 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
       <project name="CyanogenMod/android_hardware_ti_wlan" path="hardware/ti/wlan" remote="github" revision="cm-11.0" />
       <remove-project name="SlimRoms/android_system_netd" />
       <project name="CyanogenMod/android_system_netd" path="system/netd" remote="github" revision="cm-11.0" />
+      <remove-project name="SlimRoms/bootable_recovery" />
+      <project name="omnirom/android_bootable_recovery" path="bootable/recovery" remote="github" revision="android-4.4" />
     </manifest>
 
 
