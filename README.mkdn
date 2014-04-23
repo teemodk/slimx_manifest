@@ -16,35 +16,43 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
 
     <?xml version="1.0" encoding="UTF-8"?>
     <manifest>
-
-        <!-- Endeavoru repos -->
-        <project name="teemodk/android_kernel_htc_endeavoru" path="kernel/htc/endeavoru" remote="github" revision="kk4.4" />
-        <project name="teemodk/android_device_htc_endeavoru" path="device/htc/endeavoru" remote="github" revision="kk4.4" />
-        <project name="teemodk/android_device_htc_tegra3-common" path="device/htc/tegra3-common" remote="github" revision="kk4.4" />
-        <project name="teemodk/proprietary_vendor_htc" path="vendor/htc" remote="github" revision="kk4.4" />
-
-        <!-- CM stuff needed -->
-        <project name="CyanogenMod/android_external_wpa_supplicant_8_ti" path="external/wpa_supplicant_8_ti" remote="github" revision="cm-11.0" />
+        <!-- Removes -->
+        <remove-project name="SlimRoms/android_external_wpa_supplicant_8" />
         <remove-project name="SlimRoms/hardware_ti_wpan" />
-        <project name="CyanogenMod/android_hardware_ti_wpan" path="hardware/ti/wpan" remote="github" revision="cm-11.0" />
         <remove-project name="SlimRoms/hardware_ti_wlan" />
-        <project name="CyanogenMod/android_hardware_ti_wlan" path="hardware/ti/wlan" remote="github" revision="cm-11.0" />
         <remove-project name="SlimRoms/android_system_netd" />
-        <project name="CyanogenMod/android_system_netd" path="system/netd" remote="github" revision="cm-11.0" />
-        <!-- CM Power Hints breaks the build -->
-        <remove-project name="SlimRoms/frameworks_av" />
-        <project name="teemodk/android_frameworks_av" path="frameworks/av" remote="github" revision="kk4.4" />
-
-        <!-- TWRP -->
+        <remove-project name="SlimRoms/android_external_sepolicy" />
         <remove-project name="SlimRoms/bootable_recovery" />
-        <project name="teemodk/android_bootable_recovery" path="bootable/recovery" remote="github" revision="kk4.4" />
-        <!-- Fix 16:9 profiles -->
         <remove-project name="SlimRoms/packages_apps_Camera2" />
-        <project name="teemodk/packages_apps_Camera2" path="packages/apps/Camera2" remote="github" revision="kk4.4" />
-        <!-- replace MMS with usable size abilities (remove for standard mms limit 300kB) -->
         <remove-project name="SlimRoms/packages_apps_Mms" />
-        <project name="teemodk/packages_apps_MMs" path="packages/apps/Mms" remote="github" revision="bigmms" />
+        <!-- remove-project name="SlimRoms/frameworks_av" / -->
 
+        <!-- Endeavoru -->
+        <project name="teemodk/android_device_htc_endeavoru"     path="device/htc/endeavoru"      remote="github" revision="kk4.4" />
+        <project name="teemodk/android_kernel_htc_endeavoru"     path="kernel/htc/endeavoru"      remote="github" revision="kk4.4" />
+        <project name="teemodk/android_device_htc_tegra3-common" path="device/htc/tegra3-common"  remote="github" revision="kk4.4" />
+        <project name="teemodk/proprietary_vendor_htc"           path="vendor/htc"                remote="github" revision="kk4.4" />
+        <project name="teemodk/android_bootable_recovery"        path="bootable/recovery"         remote="github" revision="android-4.4" />
+                       <!-- Fix 16:9 profiles -->
+        <project name="teemodk/packages_apps_Camera2"            path="packages/apps/Camera2"     remote="github" revision="kk4.4" />
+                       <!-- replace MMS with usable size abilities -->
+        <project name="teemodk/packages_apps_Mms"                path="packages/apps/Mms"         remote="github" revision="bigmms" />
+
+        <!-- AOSP -->
+        <project name="teemodk/aosp_wpa"                         path="external/wpa_supplicant_8" remote="github" revision="kk4.4" />
+        <project name="teemodk/aosp_libnl"                       path="external/libnl"            remote="github" revision="kk4.4" />
+        <!-- project name="platform/hardware/ti/wpan"                path="hardware/ti/wpan"          remote="aosp"   revision="master" / -->
+        <!-- project name="platform/hardware/ti/wlan"                path="hardware/ti/wlan"          remote="aosp"   revision="master" / -->
+
+        <!-- CM11 -->
+        <project name="CyanogenMod/android_system_netd"                  path="system/netd"        remote="github" revision="cm-11.0" />
+        <project name="CyanogenMod/android_external_sepolicy"            path="external/sepolicy"  remote="github" revision="cm-11.0" />
+        <project name="CyanogenMod/android_hardware_ti_wpan"             path="hardware/ti/wpan"   remote="github" revision="cm-11.0" />
+        <project name="CyanogenMod/android_hardware_ti_wlan"             path="hardware/ti/wlan"   remote="github" revision="cm-11.0" />
+        <project name="CyanogenMod/android_system_netd"                  path="system/netd"        remote="github" revision="cm-11.0" />
+                        <!-- (CM Power Hints breaks the build) -->
+        <!-- project name="teemodk/android_frameworks_av" path="frameworks/av" remote="github" revision="kk4.4" / -->
+        <!-- project name="CyanogenMod/android_external_wpa_supplicant_8_ti" path="external/wpa_supplicant_8_ti" remote="github" revision="cm-11.0" / -->
     </manifest>
 
 
