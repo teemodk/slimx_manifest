@@ -5,9 +5,6 @@ Welcome to SlimKAT for HTC OneX
 Getting Started
 ---------------
 
-To get started with SlimKat, you'll need to get familiar with
-[Git and Repo](http://source.android.com/download/using-repo).
-
 Init your repo:
 
     $ repo init -u git://github.com/SlimRoms/platform_manifest.git -b kk4.4
