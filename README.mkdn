@@ -14,7 +14,7 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<manifest>
 
-	    <!-- Removes -->
+	      <!-- Removes -->
 	    <remove-project name="SlimRoms/android_external_wpa_supplicant_8" />
 	    <remove-project name="SlimRoms/hardware_ti_wpan" />
 	    <remove-project name="SlimRoms/hardware_ti_wlan" />
@@ -23,18 +23,22 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
 	    <remove-project name="SlimRoms/android_external_sepolicy" />
 	    <remove-project name="SlimRoms/android_system_core" />
 	    <remove-project name="SlimRoms/packages_apps_DSPManager"  />
+            <remove-project name="SlimRoms/packages_apps_Mms" />
 
-	    <!-- Endeavoru -->
+	      <!-- Endeavoru -->
 	    <project name="teemodk/android_kernel_htc_endeavoru"         path="kernel/htc/endeavoru"      remote="github" revision="kk4.4" />
 	    <project name="teemodk/android_device_htc_endeavoru"         path="device/htc/endeavoru"      remote="github" revision="kk4.4" />
 	    <project name="teemodk/android_device_htc_tegra3-common"     path="device/htc/tegra3-common"  remote="github" revision="kk4.4" />
 	    <project name="teemodk/proprietary_vendor_htc"               path="vendor/htc"                remote="github" revision="kk4.4" />
-	    <!-- small changes to init -->
-	    <project name="teemodk/android_system_core"                  path="system/core"               remote="github" revision="kk4.4" />
-	         <!-- Manage "own" recovery -->
-	    <project name="omnirom/android_bootable_recovery"            path="bootable/recovery"         remote="github" revision="android-4.4" />
 
-	    <!-- CM11 -->
+	      <!-- Small changes to init -->
+	    <project name="teemodk/android_system_core"                  path="system/core"               remote="github" revision="kk4.4" />
+	      <!-- Manage twrp recovery -->
+	    <project name="omnirom/android_bootable_recovery"            path="bootable/recovery"         remote="github" revision="android-4.4" />
+              <!-- replace MMS with usable size abilities -->
+            <project name="teemodk/packages_apps_Mms"                    path="packages/apps/Mms"         remote="github" revision="bigmms" />
+
+	      <!-- CM11 -->
 	    <project name="CyanogenMod/android_external_sepolicy"            path="external/sepolicy"  remote="github" revision="cm-11.0" />
 	    <project name="CyanogenMod/android_external_wpa_supplicant_8_ti" path="external/wpa_supplicant_8_ti" remote="github" revision="cm-11.0" />
 	    <project name="CyanogenMod/android_hardware_ti_wpan"             path="hardware/ti/wpan"   remote="github" revision="cm-11.0" />
@@ -55,7 +59,7 @@ Setup environment:
 
 Build:
 
-    $ make -j4 bacon
+    $ make -j7 bacon
 
 
 
