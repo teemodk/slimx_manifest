@@ -33,7 +33,7 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
 
               <!-- Small changes to init -->
             <project name="teemodk/android_system_core"                  path="system/core"               remote="github" revision="kk4.4" />
-              <!-- Manage twrp recovery -->
+              <!-- Use twrp direct source -->
             <project name="omnirom/android_bootable_recovery"            path="bootable/recovery"         remote="github" revision="android-4.4" />
               <!-- replace MMS with usable size abilities -->
             <project name="teemodk/packages_apps_Mms"                    path="packages/apps/Mms"         remote="github" revision="bigmms" />
