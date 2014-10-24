@@ -24,6 +24,7 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
             <remove-project name="SlimRoms/android_system_core" />
             <remove-project name="SlimRoms/packages_apps_DSPManager"  />
             <remove-project name="SlimRoms/packages_apps_Mms" />
+            <remove-project name="SlimRoms/vendor_slim" />
 
               <!-- Endeavoru -->
             <project name="teemodk/android_kernel_htc_endeavoru"         path="kernel/htc/endeavoru"      remote="github" revision="kk4.4" />
@@ -31,7 +32,9 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
             <project name="teemodk/android_device_htc_tegra3-common"     path="device/htc/tegra3-common"  remote="github" revision="kk4.4" />
             <project name="teemodk/proprietary_vendor_htc"               path="vendor/htc"                remote="github" revision="kk4.4" />
 
-              <!-- Small changes to init -->
+            <!-- Keep Nova -->
+            <project name="teemodk/vendor_slim"                          path="vendor/slim"               remote="github" revision="kk4.4" />
+<!-- Small changes to init -->
             <project name="teemodk/android_system_core"                  path="system/core"               remote="github" revision="kk4.4" />
               <!-- Use twrp direct source -->
             <project name="omnirom/android_bootable_recovery"            path="bootable/recovery"         remote="github" revision="android-4.4" />
