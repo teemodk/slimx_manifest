@@ -7,48 +7,51 @@ Getting Started
 
 Init your repo:
 
-    $ repo init -u git://github.com/SlimRoms/platform_manifest.git -b kk4.4
+    $ repo init -u git://github.com/SlimRoms/platform_manifest.git -b lp5.0
 
 Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
 
         <?xml version="1.0" encoding="UTF-8"?>
         <manifest>
 
-              <!-- Removes -->
-            <remove-project name="SlimRoms/android_external_wpa_supplicant_8" />
-            <remove-project name="SlimRoms/hardware_ti_wpan" />
-            <remove-project name="SlimRoms/hardware_ti_wlan" />
-            <remove-project name="SlimRoms/android_system_netd" />
-            <remove-project name="SlimRoms/bootable_recovery" />
-            <remove-project name="SlimRoms/android_external_sepolicy" />
-            <remove-project name="SlimRoms/android_system_core" />
-            <remove-project name="SlimRoms/packages_apps_DSPManager"  />
-            <remove-project name="SlimRoms/packages_apps_Mms" />
-            <remove-project name="SlimRoms/vendor_slim" />
+            <!-- Don't use Slim -->
 
-              <!-- Endeavoru -->
-            <project name="teemodk/android_kernel_htc_endeavoru"         path="kernel/htc/endeavoru"      remote="github" revision="kk4.4" />
-            <project name="teemodk/android_device_htc_endeavoru"         path="device/htc/endeavoru"      remote="github" revision="kk4.4" />
-            <project name="teemodk/android_device_htc_tegra3-common"     path="device/htc/tegra3-common"  remote="github" revision="kk4.4" />
-            <project name="teemodk/proprietary_vendor_htc"               path="vendor/htc"                remote="github" revision="kk4.4" />
+            <!-- remove-project name="SlimRoms/android_external_sepolicy" / -->
+        <remove-project name="SlimRoms/android_external_wpa_supplicant_8" />
+        <remove-project name="SlimRoms/hardware_ti_wpan" />
+        <remove-project name="SlimRoms/hardware_ti_wlan" />
+        <remove-project name="SlimRoms/android_system_netd" />
+        <remove-project name="SlimRoms/hardware_libhardware_legacy" />
+        <remove-project name="SlimRoms/frameworks_opt_telephony" />
+        <remove-project name="SlimRoms/android_external_skia" />
+        <remove-project name="SlimRoms/frameworks_av" />
+        <remove-project name="SlimRoms/android_system_vold" />
 
-              <!-- Keep Nova -->
-            <project name="teemodk/vendor_slim"                          path="vendor/slim"               remote="github" revision="kk4.4" />
-              <!-- Small changes to init -->
-            <project name="teemodk/android_system_core"                  path="system/core"               remote="github" revision="kk4.4" />
-              <!-- Use twrp direct source -->
-            <project name="omnirom/android_bootable_recovery"            path="bootable/recovery"         remote="github" revision="android-4.4" />
-              <!-- replace MMS with usable size abilities -->
-            <project name="teemodk/packages_apps_Mms"                    path="packages/apps/Mms"         remote="github" revision="bigmms" />
+            <!-- Replace with -->
 
-              <!-- CM11 -->
-            <project name="CyanogenMod/android_external_sepolicy"            path="external/sepolicy"  remote="github" revision="cm-11.0" />
-            <project name="CyanogenMod/android_external_wpa_supplicant_8_ti" path="external/wpa_supplicant_8_ti" remote="github" revision="cm-11.0" />
-            <project name="CyanogenMod/android_hardware_ti_wpan"             path="hardware/ti/wpan"   remote="github" revision="cm-11.0" />
-            <project name="CyanogenMod/android_hardware_ti_wlan"             path="hardware/ti/wlan"   remote="github" revision="cm-11.0" />
-            <project name="CyanogenMod/android_system_netd"                  path="system/netd"        remote="github" revision="cm-11.0" />
+        <!-- project name="CyanogenMod/android_external_sepolicy"         path="external/sepolicy"         remote="github" revision="cm-12.0" / -->
+        <project name="CyanogenMod/android_external_wpa_supplicant_8" path="external/wpa_supplicant_8"   remote="github" revision="cm-12.0" />
+        <project name="CyanogenMod/android_hardware_ti_wpan"          path="hardware/ti/wpan"            remote="github" revision="cm-12.0" />
+        <project name="CyanogenMod/android_hardware_ti_wlan"          path="hardware/ti/wlan"            remote="github" revision="cm-12.0" />
+        <project name="CyanogenMod/android_system_netd"               path="system/netd"                 remote="github" revision="cm-12.0" />
 
-        </manifest>
+            <!-- Legacy stuff -->
+        <project name="teemodk/hardware_libhardware_legacy"           path="hardware/libhardware_legacy" remote="github" revision="lp5.0" />
+        <project name="teemodk/android_external_skia"                 path="external/skia"               remote="github" revision="lp5.0" />
+        <project name="teemodk/android_frameworks_av"                 path="frameworks/av"               remote="github" revision="lp5.0" />
+            <!-- project name="CyanogenMod/android_frameworks_av"             path="frameworks/av"               remote="github" revision="cm-12.0" / -->
+        <project name="teemodk/android_system_vold"                   path="system/vold"                 remote="github" revision="cm-12.0" />
+
+            <!-- HOX need UICC TLV decoding for for SIM on legacy RIL -->
+        <project name="teemodk/frameworks_opt_telephony"              path="frameworks/opt/telephony"  remote="github" revision="lp5.0" />
+
+            <!-- Device -->
+        <project name="thoemy/proprietary_vendor_htc"                 path="vendor/htc"                remote="github" revision="cm-12.0" />
+        <project name="teemodk/android_kernel_htc_endeavoru"          path="kernel/htc/endeavoru"      remote="github" revision="lp5.0" />
+        <project name="teemodk/android_device_htc_endeavoru"          path="device/htc/endeavoru"      remote="github" revision="lp5.0" />
+        <project name="teemodk/android_device_htc_tegra3-common"      path="device/htc/tegra3-common"  remote="github" revision="lp5.0" />
+
+    </manifest>
 
 
 Get the source:
@@ -62,7 +65,7 @@ Setup environment:
 
 Build:
 
-    $ make -j7 bacon
+    $ mka bacon
 
 
 
