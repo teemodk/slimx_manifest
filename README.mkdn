@@ -16,7 +16,7 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
 
             <!-- Don't use Slim -->
 
-            <!-- remove-project name="SlimRoms/android_external_sepolicy" / -->
+    <!-- remove-project name="SlimRoms/android_external_sepolicy" / -->
         <remove-project name="SlimRoms/android_external_wpa_supplicant_8" />
         <remove-project name="SlimRoms/hardware_ti_wpan" />
         <remove-project name="SlimRoms/hardware_ti_wlan" />
@@ -29,23 +29,23 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
 
             <!-- Replace with -->
 
-        <!-- project name="CyanogenMod/android_external_sepolicy"         path="external/sepolicy"         remote="github" revision="cm-12.0" / -->
+    <!-- project name="CyanogenMod/android_external_sepolicy"         path="external/sepolicy"         remote="github" revision="cm-12.0" / -->
         <project name="CyanogenMod/android_external_wpa_supplicant_8" path="external/wpa_supplicant_8"   remote="github" revision="cm-12.0" />
         <project name="CyanogenMod/android_hardware_ti_wpan"          path="hardware/ti/wpan"            remote="github" revision="cm-12.0" />
         <project name="CyanogenMod/android_hardware_ti_wlan"          path="hardware/ti/wlan"            remote="github" revision="cm-12.0" />
         <project name="CyanogenMod/android_system_netd"               path="system/netd"                 remote="github" revision="cm-12.0" />
 
-            <!-- Legacy stuff -->
+    <!-- Legacy stuff -->
         <project name="teemodk/hardware_libhardware_legacy"           path="hardware/libhardware_legacy" remote="github" revision="lp5.0" />
         <project name="teemodk/android_external_skia"                 path="external/skia"               remote="github" revision="lp5.0" />
         <project name="teemodk/android_frameworks_av"                 path="frameworks/av"               remote="github" revision="lp5.0" />
-            <!-- project name="CyanogenMod/android_frameworks_av"             path="frameworks/av"               remote="github" revision="cm-12.0" / -->
+    <!-- project name="CyanogenMod/android_frameworks_av"             path="frameworks/av"               remote="github" revision="cm-12.0" / -->
         <project name="teemodk/android_system_vold"                   path="system/vold"                 remote="github" revision="cm-12.0" />
 
-            <!-- HOX need UICC TLV decoding for for SIM on legacy RIL -->
+    <!-- HOX need UICC TLV decoding for for SIM on legacy RIL -->
         <project name="teemodk/frameworks_opt_telephony"              path="frameworks/opt/telephony"  remote="github" revision="lp5.0" />
 
-            <!-- Device -->
+    <!-- Device -->
         <project name="thoemy/proprietary_vendor_htc"                 path="vendor/htc"                remote="github" revision="cm-12.0" />
         <project name="teemodk/android_kernel_htc_endeavoru"          path="kernel/htc/endeavoru"      remote="github" revision="lp5.0" />
         <project name="teemodk/android_device_htc_endeavoru"          path="device/htc/endeavoru"      remote="github" revision="lp5.0" />
