@@ -32,17 +32,17 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
         <project name="CyanogenMod/android_hardware_ti_wpan"          path="hardware/ti/wpan"            remote="github" revision="cm-12.0" />
         <project name="CyanogenMod/android_hardware_ti_wlan"          path="hardware/ti/wlan"            remote="github" revision="cm-12.0" />
         <project name="CyanogenMod/android_system_netd"               path="system/netd"                 remote="github" revision="cm-12.0" />
-        <project name="CyanogenMod/android_external_sepolicy"         path="external/sepolicy"         remote="github" revision="cm-12.0" />
-
+        <project name="CyanogenMod/android_external_sepolicy"         path="external/sepolicy"           remote="github" revision="cm-12.0" />
         <project name="teemodk/hardware_libhardware_legacy"           path="hardware/libhardware_legacy" remote="github" revision="lp5.0" />
         <project name="teemodk/android_external_skia"                 path="external/skia"               remote="github" revision="lp5.0" />
         <project name="teemodk/frameworks_native"                     path="frameworks/native"           remote="github" revision="lp5.0" />
 
             <!-- HOX need UICC TLV decoding for for SIM on legacy RIL -->
-            
+
         <project name="teemodk/frameworks_opt_telephony"              path="frameworks/opt/telephony"  remote="github" revision="lp5.0" />
 
             <!-- Device -->
+
         <project name="thoemy/proprietary_vendor_htc"                 path="vendor/htc"                remote="github" revision="cm-12.0" />
         <project name="teemodk/android_kernel_htc_endeavoru"          path="kernel/htc/endeavoru"      remote="github" revision="lp5.0" />
         <project name="teemodk/android_device_htc_endeavoru"          path="device/htc/endeavoru"      remote="github" revision="lp5.0" />
@@ -68,3 +68,5 @@ Build:
 
 
 To view the status of patches, visit [SlimRoms Code Review](http://gerrit.slimroms.net)
+
+Note: Branch "lp5.0" is cloed from SlimRoms, "cm-12.0" from CyanogenMod
