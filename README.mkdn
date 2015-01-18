@@ -1,7 +1,7 @@
 Warning!  Use this only for the New Storage Layout 
 --------------------------------------------------
 
-http://review.cyanogenmod.org/#/c/59912/ - Thanks Thomas Wendt
+Based on http://review.cyanogenmod.org/#/c/85364/ - Thanks Thomas Wendt
 
 
     #mmcblk0p1:  00600000 00001000 "wlan"
@@ -10,9 +10,9 @@ http://review.cyanogenmod.org/#/c/59912/ - Thanks Thomas Wendt
     #mmcblk0p4:  00800000 00001000 "boot"
     #mmcblk0p5:  00800000 00001000 "recovery"
     #mmcblk0p12: 50000000 00001000 "system"
-    #mmcblk0p13: 14000000 00001000 "cache"      - unused
+    #mmcblk0p13: 14000000 00001000 "cache"      - /cache
     #mmcblk0p14:650000000 00001000 "internalsd" - is now /data, including emulated sdcard
-    #mmcblk0p15: 89400000 00001000 "userdata"   - is now /cache
+    #mmcblk0p15: 89400000 00001000 "userdata"   - is now /xtradata
     #mmcblk0p16: 00200000 00001000 "extra"
     #mmcblk0p17: 00200000 00001000 "misc"
     #mmcblk0p19: 01600000 00001000 "devlog"
@@ -20,7 +20,7 @@ http://review.cyanogenmod.org/#/c/59912/ - Thanks Thomas Wendt
 
 Init your repo:
 
-    $ repo init -u git://github.com/SlimRoms/slimx_manifest.git -b kk4.4
+    $ repo init -u git://github.com/SlimRoms/platform_manifest.git -b kk4.4
 
 Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
 
