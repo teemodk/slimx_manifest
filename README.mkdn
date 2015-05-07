@@ -78,5 +78,3 @@ Build:
 
 
 To view the status of patches, visit [SlimRoms Code Review](https://review.slimroms.eu)
-
-Note: Branch "lp5.0" is cloned from SlimRoms, "cm-12.0" from CyanogenMod
