@@ -35,7 +35,7 @@ Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
     <project name="teemodk/android_bootable_recovery"             path="bootable/recovery"         remote="github" revision="android-5.1" />
 
     <!-- Use this for Viper4Android to work -->
-    <project name="teemodk/android_external_sepolicy"             path="external/sepolicy"         remote="github" revision="LP5.1" />
+    <project name="teemodk/android_external_sepolicy"             path="external/sepolicy"         remote="github" revision="lp5.1" />
 
     <!-- Device -->
     <project name="teemodk/proprietary_vendor_htc"                path="vendor/htc"                remote="github" revision="lp5.1" />
