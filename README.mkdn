@@ -9,57 +9,7 @@ Init your repo:
 
     $ repo init -u git://github.com/SlimRoms/platform_manifest.git -b lp5.1
 
-Add One X repositories - create file .repo/local_manifests/slim_manifest.xml
-
-    <?xml version="1.0" encoding="UTF-8"?>
-    <manifest>
-
-    <!-- Don't use this from Slim -->
-
-    <remove-project name="SlimRoms/hardware_ti_wlan" />
-    <remove-project name="SlimRoms/hardware_ti_wpan" />
-    <remove-project name="SlimRoms/android_external_wpa_supplicant_8" />
-
-    <remove-project name="SlimRoms/bootable_recovery" />
-
-    <remove-project name="SlimRoms/android_external_sepolicy" />
-
-      <!-- Replace with this -->
-
-    <!-- Hold on to "our own" ti-wlan on CM -->
-    <project name="CyanogenMod/android_hardware_ti_wlan"          path="hardware/ti/wlan"          remote="github" revision="cm-12.1" />
-    <project name="CyanogenMod/android_hardware_ti_wpan"          path="hardware/ti/wpan"          remote="github" revision="cm-12.1" />
-    <project name="CyanogenMod/android_external_wpa_supplicant_8" path="external/wpa_supplicant_8" remote="github" revision="cm-12.1" />
-
-    <!-- Using TWRP for New Layout - doesn't matter for ROM building -->
-    <project name="teemodk/android_bootable_recovery"             path="bootable/recovery"         remote="github" revision="android-5.1" />
-
-    <!-- Use this for Viper4Android to work -->
-    <project name="teemodk/android_external_sepolicy"             path="external/sepolicy"         remote="github" revision="lp5.1" />
-
-    <!-- Device -->
-    <project name="teemodk/proprietary_vendor_htc"                path="vendor/htc"                remote="github" revision="lp5.1" />
-    <project name="teemodk/android_kernel_htc_endeavoru"          path="kernel/htc/endeavoru"      remote="github" revision="lp5.1" />
-    <project name="teemodk/android_device_htc_endeavoru"          path="device/htc/endeavoru"      remote="github" revision="lp5.1" />
-    <project name="teemodk/android_device_htc_tegra3-common"      path="device/htc/tegra3-common"  remote="github" revision="lp5.1" />
-
-    <!--
-    Slim-5.1.1.alpha.0.1-UNOFFICIAL-20150506-2149
-    
-    Cherry Picks
-     Navigation: Bring up new Slim navigation and buttons frameworks
-      frameworks_base
-       https://review.slimroms.eu/#/c/2378/
-       https://review.slimroms.eu/#/c/2424/
-       https://review.slimroms.eu/#/c/2585/
-      packages_apps_Settings
-       https://review.slimroms.eu/#/c/2678/
-    -->
-
- 
-    </manifest>
-
-
+Add One X repositories - copy slim_manifest.xml to .repo/local_manifests/slim_manifest.xml
 
 Get the source:
 
