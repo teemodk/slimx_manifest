@@ -23,45 +23,114 @@
     <!-- Use this for Viper4Android to work -->
     <project name="teemodk/android_external_sepolicy"             path="external/sepolicy"         remote="github" revision="lp5.1" />
 
-        <!-- Device -->
+    <!-- Common Tegra3 -->
     <project name="teemodk/proprietary_vendor_htc"                path="vendor/htc"                remote="github" revision="lp5.1" />
-    <project name="teemodk/android_kernel_htc_endeavoru"          path="kernel/htc/endeavoru"      remote="github" revision="lp5.1" />
-    <project name="teemodk/android_device_htc_endeavoru"          path="device/htc/endeavoru"      remote="github" revision="lp5.1" />
     <project name="teemodk/android_device_htc_tegra3-common"      path="device/htc/tegra3-common"  remote="github" revision="lp5.1" />
+    <!-- kernel & device - use twrp branch for building twrp - it will use better compression -->
+    <project name="teemodk/android_device_htc_endeavoru"          path="device/htc/endeavoru"      remote="github" revision="lp5.1" />
+    <project name="teemodk/android_kernel_htc_endeavoru"          path="kernel/htc/endeavoru"      remote="github" revision="lp5.1" />
 
 <!--
-SlimLP-5.1.1-20150509-1127.zip
 
-Add Nav Buttons and the awesome NX Gesture Interface
-Add the missing RRO Layers commits
+CHERRY PICKS 0516
+  GSM: remove 'Carrier Settings' (fixes FC)
+   packages/services/Telephony
+    https://review.slimroms.eu/#/c/3221/
+  
+  RRO2.1 Layers 2.1
+   packages/apps/Settings
+    https://review.slimroms.eu/#/c/2226/
+    https://review.slimroms.eu/#/c/2227/
+    https://review.slimroms.eu/#/c/2613/
+   frameworks_base
+    https://review.slimroms.eu/#/c/2224/
+    https://review.slimroms.eu/#/c/2225/
+   packages/apps/Contacts
+    https://review.slimroms.eu/#/c/2231/
+   packages/apps/ContactsCommon
+    https://review.slimroms.eu/#/c/2233/
+   packages/apps/Dialer
+    https://review.slimroms.eu/#/c/2232/
+   packages/apps/InCallUI
+    https://review.slimroms.eu/#/c/2234/
+  
+  Slims Hardware Key Rebinding
+   frameworks_base
+    https://review.slimroms.eu/#/c/3098/
+   packages_apps_Settings
+    https://review.slimroms.eu/#/c/3097/
 
-CHERRY PICKS
- Navigation: Bring up new Slim navigation and buttons frameworks
-  frameworks_base
-   https://review.slimroms.eu/#/c/2378/
-   https://review.slimroms.eu/#/c/2424/
-   https://review.slimroms.eu/#/c/2585/
-  packages_apps_Settings
-   https://review.slimroms.eu/#/c/2678/
+  Slims navbar customizations
+    frameworks_base
+     https://review.slimroms.eu/#/c/2939/
+    packages_apps_Settings
+     https://review.slimroms.eu/#/c/2940/
 
- RRO2.1 Layers 2.1
-  packages/apps/Settings
-   https://review.slimroms.eu/#/c/2226/
-   https://review.slimroms.eu/#/c/2227/
-   https://review.slimroms.eu/#/c/2613/
-    fix:packages/apps/Settings/res/layout/dashboard_category.xml:25: error: Error parsing XML: duplicate attribute
-  frameworks_base
-   https://review.slimroms.eu/#/c/2224/
-   https://review.slimroms.eu/#/c/2225/
-    fix:frameworks/base/packages/SystemUI/res/layout/keyguard_status_bar.xml:63: error: Error parsing XML: duplicate attribute
-  packages/apps/Contacts
-   https://review.slimroms.eu/#/c/2231/
-  packages/apps/ContactsCommon
-   https://review.slimroms.eu/#/c/2233/
-  packages/apps/Dialer
-   https://review.slimroms.eu/#/c/2232/
-  packages/apps/InCallUI
-   https://review.slimroms.eu/#/c/2234/
+   Add double tap option to lockscreen shortcuts 
+    frameworks_base
+     https://review.slimroms.eu/#/c/3199/
+    packages_apps_Settings
+     https://review.slimroms.eu/#/c/3198/
+   
+   add Screenshot tile
+    frameworks_base
+     https://review.slimroms.eu/#/c/2949/
+    packages_apps_Settings
+     https://review.slimroms.eu/#/c/2951/
+     https://review.slimroms.eu/#/c/2950/
+     
+   Allow disabling adjusting volume sounds
+    frameworks_base
+     https://review.slimroms.eu/#/c/651/
+    packages_apps_Settings
+     https://review.slimroms.eu/#/c/650/
+     
+   base: alarms and no interrupt zen mode
+     https://review.slimroms.eu/#/c/3026/
+   DeskClock: alarms and no interrupt zen mode
+     https://review.slimroms.eu/#/c/3040/
+   Settings: alarms and no interrupt zen mode
+     https://review.slimroms.eu/#/c/3034/
+
+   allow unlinking ringer with notification volume
+    frameworks_base
+     https://review.slimroms.eu/#/c/3027/
+    packages_apps_Settings
+     https://review.slimroms.eu/#/c/3035/
+     
+   base: persist default unmute ringer volume
+     https://review.slimroms.eu/#/c/3028/
+   base: bring back silent mode
+     https://review.slimroms.eu/#/c/3029/
+   base: expanding volume panel
+     https://review.slimroms.eu/#/c/3031/
+   
+   Gallery2: Initialize Floating Action Button
+     https://review.slimroms.eu/#/c/3350/
+   Gallery2: SLIM Materialization v1
+     https://review.slimroms.eu/#/c/3295/
+     
+     2 or 3 compile errors - fix them :)
+     
+     testing:doze, ok -> pushed to git lp5.1
+     
+     testing:MR - adding hardboot patch to kernel -> lp5.1-hbk
+     install MultiRom(playstore) manage and boot to other ROM seems ok
+
+tomas@teemo:~/SlimLP/51$ repo status
+project device/htc/endeavoru/                   (*** NO BRANCH ***)
+ -m     overlay/frameworks/base/core/res/res/values/config.xml
+ --     overlay/packages/apps/Mms/res/xml/mms_config.xml
+project frameworks/base/                        branch cp0516
+project packages/apps/Contacts/                 branch cp0516
+project packages/apps/ContactsCommon/           branch cp0516
+project packages/apps/DeskClock/                branch cp0516
+project packages/apps/Dialer/                   branch cp0516
+project packages/apps/Gallery2/                 branch cp0516
+project packages/apps/InCallUI/                 branch cp0516
+project packages/apps/Settings/                 branch cp0516
+project packages/services/Telephony/            branch cp0516
+
 -->
 
 </manifest>
