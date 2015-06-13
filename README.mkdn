@@ -9,7 +9,7 @@ Init your repo:
 
     $ repo init -u git://github.com/SlimRoms/platform_manifest.git -b lp5.1
 
-Add One X repositories - copy slim_manifest.xml to .repo/local_manifests/slim_manifest.xml
+Add One X repositories - copy slim_manifest.xml to .repo/local_manifests/slim_manifest.xml - 
 Use [Branch:lp5.1-oldlayout](https://github.com/teemodk/slimx_manifest/blob/lp5.1-oldlayout/slim_manifest.xml)
 
 Get the source:
