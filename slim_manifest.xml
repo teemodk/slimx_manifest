@@ -5,9 +5,7 @@
     <remove-project name="SlimRoms/hardware_ti_wlan" />
     <remove-project name="SlimRoms/hardware_ti_wpan" />
     <remove-project name="SlimRoms/android_external_wpa_supplicant_8" />
-
     <remove-project name="SlimRoms/bootable_recovery" />
-
     <remove-project name="SlimRoms/android_external_sepolicy" />
 
         <!-- Replace with this -->
@@ -18,7 +16,7 @@
     <project name="CyanogenMod/android_external_wpa_supplicant_8" path="external/wpa_supplicant_8" remote="github" revision="cm-12.1" />
 
         <!-- TWRP -->
-    <project name="teemodk/android_bootable_recovery"             path="bootable/recovery"         remote="github" revision="android-5.1" />
+    <project name="teemodk/android_bootable_recovery"             path="bootable/recovery"         remote="github" revision="android-5.1-b" />
 
         <!-- Use this for Viper4Android to work -->
     <project name="teemodk/android_external_sepolicy"             path="external/sepolicy"         remote="github" revision="lp5.1" />
@@ -27,58 +25,117 @@
     <project name="teemodk/proprietary_vendor_htc"                path="vendor/htc"                remote="github" revision="lp5.1" />
     <project name="teemodk/android_device_htc_tegra3-common"      path="device/htc/tegra3-common"  remote="github" revision="lp5.1" />
     <project name="teemodk/android_device_htc_endeavoru"          path="device/htc/endeavoru"      remote="github" revision="lp5.1" />
-    <project name="teemodk/android_kernel_htc_endeavoru"          path="kernel/htc/endeavoru"      remote="github" revision="lp5.1" />
+    <project name="teemodk/android_kernel_htc_endeavoru"          path="kernel/htc/endeavoru"      remote="github" revision="lp5.1-hbk" />
 
-    <!-- Add htop to Slim (1/2) -->
-    <project path="external/htop" name="CyanogenMod/android_external_htop" remote="github" revision="cm-12.1" />
-    <project path="external/libncurses" name="CyanogenMod/android_external_libncurses" remote="github" revision="cm-12.1" />
+    <!-- EZIO84 -->
+  <!--Switch to my forked projects (only needed ones, for customizations or translations) -->
+  <remove-project path="frameworks/base" name="SlimRoms/frameworks_base" />
+  <project path="frameworks/base" name="ezio84/frameworks_base" remote="github" revision="lp5.1" />
 
-<!--
+  <remove-project path="packages/apps/Settings" name="SlimRoms/packages_apps_Settings" />
+  <project path="packages/apps/Settings" name="ezio84/packages_apps_Settings" remote="github" revision="lp5.1" />
 
-# Additions per 13 June (cherry-picks)
-      
-9X RRO2.1 Layers commits
-SystemUI: improve brightness slider behavior
-Add a 2 sec timeout for heads up notifications
-Allow disabling adjusting volume sounds [2/2]
-Add back increasing ring feature (3/3).
-Base: bring back silent mode
-Telephony: GSM: remove 'Carrier Settings' regardless of csp_enabled
-Add htop to Slim (2/2)
-[2/2] Forward port power connect/disconnect notification support
-[1/2] Forward port power connect/disconnect notification support
-Keep quiet when volume keys are used to wake up device
-Allow disabling adjusting volume sounds [1/2]
-Base: persist default unmute ringer volume
-SystemUI: fix keyguard charging text not showing
-SystemUI: remove duplicate PhoneStatusBar variables
-Disable hw button brightness is hw keys are disabled
-Framework: StatusBar Ticker (1/2)
-Settings: StatusBar Ticker (2/2)
-SystemUI: Create expandable volume panel.
-[2/2] Settings: Chamber of Secrets && SlimActions to shortcuts
-Settings: make unaccounted and over-counted battery usage configurable
-[1/2] Frameworks: Chamber of Secrets && SlimActions to shortcuts
-fix CoS immersive mode
-PhoneWindowmanager: disable panic mechanism when PolicyControl activated.
-frameworks/base: Bringup expanded desktop and implement per-user configuration.
-QS: Expanded desktop tile [1/2]
-Create configurable default expanded desktop style.
-policy: Fix compilation issue
-[1/2] base: allow unlinking ringer with notification volume
+  <remove-project path="build" name="SlimRoms/android_build" />
+  <project path="build" name="ezio84/android_build" remote="github" revision="lp5.1" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
 
-# repo status
-project frameworks/base/                        branch cp0613
-project packages/apps/Contacts/                 branch cp0613
-project packages/apps/ContactsCommon/           branch cp0613
-project packages/apps/Dialer/                   branch cp0613
-project packages/apps/InCallUI/                 branch cp0613
-project packages/apps/Settings/                 branch cp0613
-project packages/services/Telecomm/             branch cp0613
-project packages/services/Telephony/            branch cp0613
-project vendor/slim/                            branch cp0613
+  <remove-project path="vendor/slim" name="SlimRoms/vendor_slim" />
+  <project path="vendor/slim" name="ezio84/vendor_slim" remote="github" revision="lp5.1" />
 
--->
+  <!-- Not needed with the advanced DocumentUI-->
+  <remove-project path="packages/apps/SlimFileManager" name="SlimRoms/packages_apps_SlimFileManager" />
+
+  <remove-project path="packages/services/Telephony" name="SlimRoms/packages_services_Telephony" />
+  <project path="packages/services/Telephony" name="ezio84/packages_services_Telephony" remote="github" revision="lp5.1" />
+  <remove-project path="packages/apps/InCallUI" name="SlimRoms/packages_apps_InCallUI" />
+  <project path="packages/apps/InCallUI" name="ezio84/packages_apps_InCallUI" remote="github" revision="lp5.1" />
+  <remove-project path="frameworks/opt/telephony" name="SlimRoms/frameworks_opt_telephony" />
+  <project path="frameworks/opt/telephony" name="ezio84/frameworks_opt_telephony" remote="github" revision="lp5.1" />
+  <remove-project path="packages/apps/Dialer" name="SlimRoms/packages_apps_Dialer" />
+  <project path="packages/apps/Dialer" name="ezio84/packages_apps_Dialer" remote="github" revision="lp5.1" />
+  <remove-project path="packages/apps/Contacts" name="SlimRoms/packages_apps_Contacts" />
+  <project path="packages/apps/Contacts" name="ezio84/packages_apps_Contacts" remote="github" revision="lp5.1" />
+  <remove-project path="packages/apps/ContactsCommon" name="SlimRoms/packages_apps_ContactsCommon" />
+  <project path="packages/apps/ContactsCommon" name="ezio84/packages_apps_ContactsCommon" remote="github" revision="lp5.1" />
+  <remove-project path="packages/apps/PackageInstaller" name="SlimRoms/packages_apps_PackageInstaller" />
+  <project path="packages/apps/PackageInstaller" name="ezio84/packages_apps_PackageInstaller" remote="github" revision="lp5.1" />
+  <remove-project path="packages/services/Telecomm" name="SlimRoms/packages_services_Telecomm" />
+  <project path="packages/services/Telecomm" name="ezio84/packages_services_Telecomm" remote="github" revision="lp5.1" />
+  <remove-project path="packages/providers/TelephonyProvider" name="SlimRoms/packages_providers_TelephonyProvider" />
+  <project path="packages/providers/TelephonyProvider" name="ezio84/packages_providers_TelephonyProvider" remote="github" revision="lp5.1" />
+
+  <remove-project path="packages/apps/DeskClock" name="SlimRoms/packages_apps_DeskClock" />
+  <project path="packages/apps/DeskClock" name="ezio84/packages_apps_DeskClock" remote="github" revision="lp5.1" />
+  <remove-project path="frameworks/opt/cards" name="SlimRoms/frameworks_opt_cards" />
+  <project path="frameworks/opt/cards" name="ezio84/frameworks_opt_cards" remote="github" revision="lp5.1" />
+  <remove-project path="external/bluetooth/bluedroid" name="SlimRoms/android_external_bluetooth_bluedroid" />
+  <project path="external/bluetooth/bluedroid" name="ezio84/android_external_bluetooth_bluedroid" remote="github" revision="lp5.1" />
+  <remove-project path="external/stagefright-plugins" name="SlimRoms/android_external_stagefright-plugins" />
+  <project path="external/stagefright-plugins" name="ezio84/android_external_stagefright-plugins" remote="github" revision="lp5.1" />
+  <remove-project path="frameworks/native" name="SlimRoms/frameworks_native" />
+  <project path="frameworks/native" name="ezio84/frameworks_native" remote="github" revision="lp5.1" />
+  <remove-project path="hardware/libhardware" name="SlimRoms/hardware_libhardware" />
+  <project path="hardware/libhardware" name="ezio84/hardware_libhardware" remote="github" revision="lp5.1" />
+  <remove-project path="frameworks/opt/net/wifi" name="SlimRoms/frameworks_opt_net_wifi" />
+  <project path="frameworks/opt/net/wifi" name="ezio84/frameworks_opt_net_wifi" remote="github" revision="lp5.1" />
+
+  <!-- Prebuilt Google Webview-->
+  <remove-project path="frameworks/webview" name="platform/frameworks/webview" />
+  <project path="frameworks/webview" name="ezio84/android_frameworks_webview" remote="github" revision="lp5.1" />
+
+  <!-- Screen recorder by ChamaleonOS-->
+  <project path="packages/apps/ScreenRecorder" name="ezio84/android_packages_apps_ScreenRecorder" remote="github" revision="lp5.1" />
+
+  <!-- Switch from old DSP Manager to AudioFX and Eleven music player by CyanogenMod -->
+  <remove-project path="packages/apps/Music" name="platform/packages/apps/Music" />
+  <remove-project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" />
+  <remove-project path="packages/apps/AudioFX" name="SlimRoms/packages_apps_AudioFX" />
+  <remove-project path="external/android-visualizer" name="SlimRoms/android_external_android-visualizer" />
+  <project path="external/android-visualizer" name="ezio84/android_external_android-visualizer" remote="github" revision="cm-12.1" />
+  <project path="packages/apps/AudioFX" name="ezio84/android_packages_apps_AudioFX" remote="github" revision="cm-12.1" />
+  <project path="packages/apps/Eleven" name="ezio84/android_packages_apps_Eleven" remote="github" revision="cm-12.1" />
+
+  <!-- Built-in CyanogenMod apps -->
+  <remove-project path="packages/apps/Terminal" name="platform/packages/apps/Terminal" />
+  <remove-project path="external/libvterm" name="platform/external/libvterm" />
+  <project path="packages/apps/Terminal" name="ezio84/android_packages_apps_Terminal" remote="github" revision="cm-12.1" />
+  <project path="external/libvterm" name="CyanogenMod/android_external_libvterm" remote="github" revision="cm-12.1" />
+  <project path="external/htop" name="CyanogenMod/android_external_htop" remote="github" revision="cm-12.1" />
+  <project path="external/libncurses" name="CyanogenMod/android_external_libncurses" remote="github" revision="cm-12.1" />
+
+  <!-- Blow shit up!! (Schwarznegger cit) and let the user install apps from playstore if needed -->
+  <remove-project path="packages/apps/FMRadio" name="platform/packages/apps/FMRadio" />
+  <remove-project name="platform/packages/wallpapers/Basic" path="packages/wallpapers/Basic" />
+  <remove-project name="platform/packages/wallpapers/Galaxy4" path="packages/wallpapers/Galaxy4" />
+  <remove-project name="platform/packages/wallpapers/HoloSpiral" path="packages/wallpapers/HoloSpiral" />
+  <remove-project name="platform/packages/wallpapers/MagicSmoke" path="packages/wallpapers/MagicSmoke" />
+  <remove-project name="platform/packages/wallpapers/MusicVisualization" path="packages/wallpapers/MusicVisualization" />
+  <remove-project name="platform/packages/wallpapers/NoiseField" path="packages/wallpapers/NoiseField" />
+  <remove-project name="platform/packages/wallpapers/PhaseBeam" path="packages/wallpapers/PhaseBeam" /> -->
+  <!-- remove-project path="packages/apps/Calendar" name="SlimRoms/packages_apps_Calendar" / -->
+  <!-- remove-project path="packages/apps/Browser" name="SlimRoms/packages_apps_Browser" / -->
+  <!-- remove-project path="packages/apps/Camera2" name="SlimRoms/packages_apps_Camera2" / -->
+  <!-- remove-project name="platform/packages/apps/HTMLViewer" path="packages/apps/HTMLViewer" / -->
+  <!-- remove-project path="packages/apps/Mms" name="SlimRoms/packages_apps_Mms" / -->
+
+  <!-- <remove-project path="packages/apps/SlimCenter" name="SlimRoms/packages_apps_SlimCenter" />
+  <project path="packages/apps/SlimCenter" name="ezio84/packages_apps_SlimCenter" remote="github" revision="lp5.1" /> -->
+
+  <remove-project path="frameworks/av" name="SlimRoms/frameworks_av" />
+  <project path="frameworks/av" name="ezio84/frameworks_av" remote="github" revision="lp5.1" />
+
+  <!-- remove-project path="art" name="SlimRoms/android_art" />
+  <project path="art" name="ezio84/android_art" remote="github" revision="lp5.1"  / -->
+
+  <!-- remove-project path="libcore" name="SlimRoms/android_libcore" />
+  <project path="libcore" name="ezio84/platform_libcore" remote="github" revision="lp5.1" / -->
+
+  <remove-project path="system/core" name="SlimRoms/android_system_core" />
+  <project path="system/core" name="ezio84/android_system_core" remote="github" revision="lp5.1" />
+
+  <remove-project path="bionic" name="SlimRoms/android_bionic" />
+  <project path="bionic" name="ezio84/android_bionic" remote="github" revision="lp5.1" />
 
 </manifest>
 
