@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-    <!-- SlimLP for HTC Endeavoru - additions and modifications: ezio84@xda - HOXified by teemo@xda -->
-
         <!-- Don't use this from Slim -->
 
     <remove-project name="SlimRoms/hardware_ti_wlan" />
