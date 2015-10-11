@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+        <!-- Don't use this from Slim -->
+
+    <remove-project name="SlimRoms/hardware_ti_wlan" />
+    <remove-project name="SlimRoms/hardware_ti_wpan" />
+    <remove-project name="SlimRoms/android_external_wpa_supplicant_8" />
+    <remove-project name="SlimRoms/bootable_recovery" />
+    <remove-project name="SlimRoms/android_external_sepolicy" />
+
+    <remove-project path="packages/apps/Contacts" name="SlimRoms/packages_apps_Contacts" remote="github" revision="lp5.1" />
+    <remove-project path="packages/apps/ContactsCommon" name="SlimRoms/packages_apps_ContactsCommon" remote="github" revision="lp5.1" />
+    <remove-project path="frameworks/base" name="SlimRoms/frameworks_base" remote="github" revision="lp5.1" />
+    <remove-project path="packages/apps/Settings" name="SlimRoms/packages_apps_Settings" remote="github" revision="lp5.1" />
+    <remove-project path="frameworks/opt/telephony" name="SlimRoms/frameworks_opt_telephony" remote="github" revision="lp5.1" />
+    <remove-project path="packages/apps/Dialer" name="SlimRoms/packages_apps_Dialer" remote="github" revision="lp5.1" />
+    <remove-project path="packages/apps/InCallUI" name="SlimRoms/packages_apps_InCallUI" remote="github" revision="lp5.1" />
+    <remove-project path="packages/services/Telephony" name="SlimRoms/packages_services_Telephony" remote="github" revision="lp5.1" />
+
+        <!-- Replace with this -->
+
+    <project path="packages/apps/Contacts"       name="teemodk/packages_apps_Contacts"       remote="github" revision="cp1005" />
+    <project path="packages/apps/ContactsCommon" name="teemodk/packages_apps_ContactsCommon" remote="github" revision="cp1005" />
+    <project path="frameworks/base"              name="teemodk/frameworks_base"              remote="github" revision="cp1005" />
+    <project path="packages/apps/Settings"       name="teemodk/packages_apps_Settings"       remote="github" revision="cp1005" />
+    <project path="frameworks/opt/telephony"     name="teemodk/frameworks_opt_telephony"     remote="github" revision="cp1005" />
+    <project path="packages/apps/Dialer"         name="teemodk/packages_apps_Dialer"         remote="github" revision="cp1005" />
+    <project path="packages/apps/InCallUI"       name="teemodk/packages_apps_InCallUI"       remote="github" revision="cp1005" />
+    <project path="packages/services/Telephony"  name="teemodk/packages_services_Telephony"  remote="github" revision="cp1005" />
+
+        <!-- Hold on to "our own" ti-wlan on CM -->
+    <project name="CyanogenMod/android_hardware_ti_wlan"          path="hardware/ti/wlan"          remote="github" revision="cm-12.1" />
+    <project name="CyanogenMod/android_hardware_ti_wpan"          path="hardware/ti/wpan"          remote="github" revision="cm-12.1" />
+    <project name="CyanogenMod/android_external_wpa_supplicant_8" path="external/wpa_supplicant_8" remote="github" revision="cm-12.1" />
+
+        <!-- TWRP -->
+    <project name="teemodk/android_bootable_recovery"             path="bootable/recovery"         remote="github" revision="android-5.1-b" />
+
+        <!-- Use this for Viper4Android to work -->
+    <project name="teemodk/android_external_sepolicy"             path="external/sepolicy"         remote="github" revision="lp5.1" />
+
+        <!-- Common Tegra3 -->
+    <project name="teemodk/proprietary_vendor_htc"                path="vendor/htc"                remote="github" revision="lp5.1" />
+    <project name="teemodk/android_device_htc_tegra3-common"      path="device/htc/tegra3-common"  remote="github" revision="lp5.1" />
+    <project name="teemodk/android_device_htc_endeavoru"          path="device/htc/endeavoru"      remote="github" revision="lp5.1" />
+    <project name="teemodk/android_kernel_htc_endeavoru"          path="kernel/htc/endeavoru"      remote="github" revision="fix" />
+
+        <!-- Big Mms -->
+    <remove-project name="SlimRoms/packages_apps_Mms" />
+    <project        name="teemodk/packages_apps_Mms"              path="packages/apps/Mms"         remote="github" revision="lp-big" />
+  
+    <!-- Screen recorder by ChamaleonOS-->
+    <!-- project path="packages/apps/ScreenRecorder" name="ezio84/android_packages_apps_ScreenRecorder" remote="github" revision="lp5.1" / -->
+
+    <!-- Blow shit up!! (Schwarznegger cit) and let the user install apps from playstore if needed -->
+    <remove-project path="packages/apps/FMRadio" name="platform/packages/apps/FMRadio" />
+    <remove-project name="platform/packages/wallpapers/Basic" path="packages/wallpapers/Basic" />
+    <remove-project name="platform/packages/wallpapers/Galaxy4" path="packages/wallpapers/Galaxy4" />
+    <remove-project name="platform/packages/wallpapers/HoloSpiral" path="packages/wallpapers/HoloSpiral" />
+    <remove-project name="platform/packages/wallpapers/MagicSmoke" path="packages/wallpapers/MagicSmoke" />
+    <remove-project name="platform/packages/wallpapers/MusicVisualization" path="packages/wallpapers/MusicVisualization" />
+    <remove-project name="platform/packages/wallpapers/NoiseField" path="packages/wallpapers/NoiseField" />
+    <remove-project name="platform/packages/wallpapers/PhaseBeam" path="packages/wallpapers/PhaseBeam" /> -->
+
+<!--
+tomas@teemodk:~/SlimLP/system > repo status
+project frameworks/base/                        branch cp1005
+project frameworks/opt/telephony/               branch cp1005
+project kernel/htc/endeavoru/                   branch fix
+project packages/apps/Contacts/                 branch cp1005
+project packages/apps/ContactsCommon/           branch cp1005
+project packages/apps/Dialer/                   branch cp1005
+project packages/apps/InCallUI/                 branch cp1005
+project packages/apps/Settings/                 branch cp1005
+project packages/services/Telephony/            branch cp1005
+tomas@teemodk:~/SlimLP/system > 
+
+fw_base:
+  SystemUI: improve brightness slider behavior
+  SystemUI: Request CHANGE_NETWORK_MODE permission
+  QSTileView: fix label recreate order
+  Update color dependent items when reusing notifications.
+  Add hotspot icon to status bar
+  CellularTile: Long-click triggers detail view instead
+    mDataController 2 mController (correction)
+  [1/2] Slim Recent App Sidebar
+  SystemUI: fix keyguard unlock drawable not updating
+  SystemUI: hide navigation bar faster in SetupWizard
+  Layers 2.1 (backwards compatible)
+  RRO aosp fixes - squashed commit
+  [2/2] Base: Add lockscreen rotation as an optional rotation setting
+  [1/2] Base: Add Long Press Volume Key To Skip Tracks
+  Base: Slim Global Menu (1/2)
+  Definition of new data profile based on apn type
+  oil
+  advanced reboot: add soft reboot option
+fw_opt_tele:
+  telephony: Release pending network requests when releasing a request
+  Definition of new data profile based on apn type in opt/telephony
+  ril: Fix Tombstone on Rild
+  Don't clear invalid defaults before SIM info of all SIMs is populated.
+Packages -
+ Aapps_Settings:
+  Fix mobile network settings for multi sim (2/2)
+  -aborted- Disable hw button brightness is hw keys are disabled
+  Settings: enable status bar brigthness slider always
+  [2/2] Slim Recent App Sidebar
+  [1/2] Settings: Add lockscreen rotation as an optional rotation setting
+  [2/2] Settings: Add Long Press Volume Key To Skip Tracks
+  Layers 2.1 (backwards compatible)
+  Fix subsettings FC
+  Exposing Settings backgrounds for more theming options, while not impacted stock.
+  Settings: Slim Global Menu (2/2)
+ Services_Telephony:
+  Fix mobile network settings for multi sim (1/2)
+ apps_InCallUI + _Contacts + _ContactsCommom + _Dialer
+  Layers 2.1 (backwards compatible)
+-->
+  
+</manifest>
+
+
+
+
+
+
